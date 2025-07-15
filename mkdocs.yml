@@ -15,8 +15,5 @@ markdown_extensions:
   - admonition
 nav:
   - Home: index.md
-  - About: about.md
-  - Getting Started: user_guide/getting_started.md
   - API Documentation:
-      - SonarPy: api/sonarpy.md
-      - SonarPyVista: api/sonarpyvista.md
+      - SonarPy: api/SonarPy.md
