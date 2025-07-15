@@ -64,5 +64,11 @@ Each output `.txt` file includes:
 **Parameters:**
 
 - `path` (`str`): Path to the folder containing `.laz` files.s
-- None
 
+### `add_headers_toLAStxt`
+
+Add column headers to las2txt output and save as csv.
+
+**Parameters:**
+
+- `path` (`str`): Path to the folder containing .txt files exported by las2txt64.
