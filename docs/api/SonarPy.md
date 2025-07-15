@@ -45,3 +45,24 @@ To calculate magnetic declination, download the IGRF13 coefficient file from:
 Place it here:
 ```text
 C:/ProgramData/anaconda3/envs/<yourenv>/lib/site-packages/pyCRGI/data/igrf13coeffs.txt
+```
+
+---
+
+## Methods
+
+### `las2txt_path(path)`
+
+Converts all `.laz` files in a directory to ASCII text files using `las2txt64`.
+
+Each output `.txt` file includes:
+- X, Y, Z coordinates (columns 1–3)
+- Intensity (column 4)
+- GPS time (column 5)
+- A header row for compatibility with `txt2las64`
+
+**Parameters:**
+
+- `path` (`str`): Path to the folder containing `.laz` files.s
+- None
+
