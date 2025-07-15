@@ -13,3 +13,10 @@ markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting Started: user_guide/getting_started.md
+  - API Documentation:
+      - SonarPy: api/sonarpy.md
+      - SonarPyVista: api/sonarpyvista.md
