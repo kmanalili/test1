@@ -18,4 +18,4 @@ nav:
   - API Documentation:
       - SonarPy: api/SonarPy.md
   - Examples:
-      - Convert GDF to STL: examples/wireframe-simple-EXAMPLE.md
+      - Mesh Example Simple: examples/wireframe-simple-EXAMPLE.md
