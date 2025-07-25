@@ -19,3 +19,4 @@ nav:
       - SonarPy: api/SonarPy.md
   - Examples:
       - Mesh Example Simple: examples/wireframe-simple-EXAMPLE.md
+      - Mesh Example: examples/wireframe-EXAMPLE.md
