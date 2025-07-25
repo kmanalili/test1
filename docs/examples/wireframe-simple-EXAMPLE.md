@@ -139,7 +139,7 @@ plotter.show()
 ```
 
 
-![Simple Point Cloud Example](../images/example_simple_points.png)
+![Simple Point Cloud Example](../images/example_simple_points.PNG)
 
 ## Build Mesh
 
@@ -170,4 +170,4 @@ mesh.plot()
     
 
 
-![Simple Mesh Example](../images/example_simple_mesh.png)
+![Simple Mesh Example](../images/example_simple_mesh.PNG)
