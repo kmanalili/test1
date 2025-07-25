@@ -6,8 +6,8 @@ SaltPy is a Python toolkit for the analysis, visualization, and processing of sa
 
 ## Documentation Sections
 
-- [API Reference](api/sonarpy.md): Detailed explanations of all available modules and classes
-- [Examples]
+- [API Reference](api/sonarpy.md): Detailed explanations of all available modules and classes.
+- [Examples](Examples): Examples of SaltPy use.
 
 ---
 

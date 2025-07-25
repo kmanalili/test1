@@ -17,3 +17,5 @@ nav:
   - Home: index.md
   - API Documentation:
       - SonarPy: api/SonarPy.md
+  - Examples: Examples
+      - Convert GDF to STL: examples/wireframe-simple-EXAMPLE.md
