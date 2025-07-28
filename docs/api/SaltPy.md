@@ -1,5 +1,4 @@
-# SonarPy
-
+# SaltPy
 A Python Class for processing and analyzing sonar data.
 
 ---
