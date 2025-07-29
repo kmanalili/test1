@@ -57,11 +57,10 @@ python -m ipykernel install --user --name geo3d --display-name "Python (geo3d)
 
 	- Or run the install script:
 
-		```bash
+```bash
 
-		python igrf13_install.py
-
-		```
+python igrf13_install.py
+```
 
   
 
