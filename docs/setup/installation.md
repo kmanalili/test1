@@ -22,7 +22,7 @@ conda activate geo3d
 ```
   
 
-3. *Make environment available in Jupyter**
+3. **Make environment available in Jupyter**
 
 ```bash
 
