@@ -1,4 +1,4 @@
-# Wireframe mesh EXAMPLE
+# Mesh Example
 
 
 ```python
@@ -14,7 +14,7 @@ import pandas as pd
 
 ## Load and investigate gdf
 
-Here we can see that at depth 580 we have an irregular count and non horizontal inclination
+At depth 580 we have an irregular count and non horizontal inclination.
 
 
 ```python
@@ -81,6 +81,7 @@ for _, row in summary.iterrows():
 
 ## Explore point cloud with PyVista
 
+The depth with tilted shots is highlighted in red.
 
 ```python
 ### irregular depth

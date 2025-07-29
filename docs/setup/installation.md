@@ -2,7 +2,7 @@
 
   
 
-## Step 1: Create and Configure Conda EnvironmFmanualent
+## Step 1: Create and Configure Conda Environmet
 
   
 
