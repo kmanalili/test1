@@ -18,7 +18,8 @@ nav:
   - Installation:
       - Set-Up: setup/installation.md
   - API Documentation:
-      - SaltPy: api/SaltPy.md
+      - SonarPy: api/SonarPy.md
+      - SonarPlots: api/SonarPlots.md
   - Examples:
       - Mesh Example Simple: examples/wireframe-simple-EXAMPLE.md
       - Mesh Example: examples/wireframe-EXAMPLE.md
