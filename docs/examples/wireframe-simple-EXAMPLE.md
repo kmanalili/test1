@@ -1,18 +1,16 @@
 
-# Wireframe mesh simple EXAMPLE
+# Mesh Simple Example
 
 
 ```python
-from stl import mesh as stl_mesh
-import numpy as np
+import saltpy
+from saltpy.agapito import SonarPy as sp
+
 import pyvista as pv
 import geopandas as gpd
+from stl import mesh as stl_mesh
+import numpy as np
 import pandas as pd
-from scipy.interpolate import griddata
-from scipy.spatial import Delaunay
-import fiona
-
-from wireframe_functions import gdf_to_points_grid_from_rc, build_horizontal_shots, build_endcap, combine_mesh_parts
 ```
 
 ## Load and investigate gdf
@@ -23,12 +21,6 @@ This must be a file with only horizontal shots.
 ```python
 gdf = gpd.read_file("02_200206.gpkg")
 ```
-
-
-
-
-## Explore point cloud with PyVista
-
 
 ```python
 # get points
@@ -44,21 +36,14 @@ plotter.add_mesh(glyphs)
 plotter.show()
 ```
 
-
 ![Simple Point Cloud Example](../images/example_simple_points.PNG)
 
-## Build Mesh
+## Build mesh and plot
 
 
 ```python
 h_vertices, h_faces = build_horizontal_shots(gdf)
 ```
-
-    Grouped by 'depth' into 82 layers.
-    
-
-## Plot Final Mesh
-
 
 ```python
 combine_mesh_parts(

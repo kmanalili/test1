@@ -2,16 +2,14 @@
 
 
 ```python
-from stl import mesh as stl_mesh
-import numpy as np
+import saltpy
+from saltpy.agapito import SonarPy as sp
+
 import pyvista as pv
 import geopandas as gpd
+from stl import mesh as stl_mesh
+import numpy as np
 import pandas as pd
-from scipy.interpolate import griddata
-from scipy.spatial import Delaunay
-import fiona
-
-from wireframe_functions import gdf_to_points_grid_from_rc, build_horizontal_shots, build_endcap, combine_mesh_parts
 ```
 
 ## Load and investigate gdf
@@ -110,27 +108,24 @@ plotter.add_mesh(glyphs, scalars="colors", rgb=True)
 plotter.show()
 ```
 
+![Point Cloud Example](../images/example_points.PNG)
 
 
 
-
-## Reconfigure shots & build initial mesh
-
-- Add horizontal shot from irregular gdf to horixontal gdf
-- build bottom mesh
-- build horizontal shot mesh
+## Build inital arrays
 
 
 ```python
-# make individual df
+# tilted gdf
 gdf_irr = gdf[(gdf["depth"] == d_irreg) & (gdf["mInc"] != 90)]
 
+# horiz gdf
 gdf_horiz = gdf[
     (gdf["depth"] != d_irreg) | ((gdf["depth"] == d_irreg) & (gdf["mInc"] == 90))
 ]
 
-b_vertices, b_faces = build_endcap(gdf_irr)
-h_vertices, h_faces = build_horizontal_shots(gdf_horiz)
+b_vertices, b_faces = sp.build_endcap(gdf_irr)
+h_vertices, h_faces = sp.build_horizontal_shots(gdf_horiz)
 ```
 
     Grouped by 'depth' into 42 layers.
@@ -151,18 +146,17 @@ shallowest_inc = gdf_irr["mInc"].abs().min()
 shallowest_incl_df = gdf_irr[gdf_irr["mInc"].abs() == shallowest_inc].copy()
 
 # build connecting layer
-connect_vertices, connect_faces = build_horizontal_shots([bottom_horiz_df, shallowest_incl_df])
+combined_df = pd.concat([bottom_horiz_df, shallowest_incl_df], ignore_index=True)
+connect_vertices, connect_faces = sp.build_horizontal_shots(combined_df)
 ```
-
+    Grouped by 'depth' into 2 layers.
 ## Plot Final Mesh
 
 
 ```python
-combine_mesh_parts(
+sp.combine_mesh_parts(
     parts=[
         (h_vertices, h_faces),
-        (b_vertices, b_faces),
-        (connect_vertices, connect_faces)
     ],
     filename="full_cave_mesh.stl"
 )
@@ -173,5 +167,4 @@ mesh.plot()
 
     Combined mesh saved to: full_cave_mesh.stl
     
-
-
+![Point Cloud Example](../images/example_mesh.PNG)

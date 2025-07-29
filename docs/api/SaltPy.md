@@ -100,10 +100,10 @@ Returns the (dx, dy, dz) deviation from a wellbore survey (`wb`) at the correct 
 
 - `df` (`pandas.DataFrame`): DataFrame containing the sonar data.
 - `wb` (`pandas.DataFrame`): Wellbore survey data with columns:
-  - `MDepth`
-  - `dx_ft`
-  - `dy_ft`
-  - `dz_ft`
+      - `MDepth`
+      - `dx_ft`
+      - `dy_ft`
+      - `dz_ft`
 
 **Returns:**
 

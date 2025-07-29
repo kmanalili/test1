@@ -2,7 +2,7 @@
 
   
 
-## Step 1: Create and Configure Conda Environment
+## Step 1: Create and Configure Conda EnvironmFmanualent
 
   
 
@@ -26,7 +26,7 @@ conda activate geo3d
 
 ```bash
 
-python -m ipykernel install --user --name geo3d --display-name "Python (geo3d)
+python -m ipykernel install --user --name geo3d --display-name "Python (geo3d)"
 ```
   
 
@@ -52,7 +52,7 @@ python -m ipykernel install --user --name geo3d --display-name "Python (geo3d)
 		
 	- Manually insert the file:
 
-			C:/Users/{your_username}/.conda/envs/geo3d/lib/site-packages/pyCRGI/data/
+	C:/Users/{your_username}/.conda/envs/geo3d/lib/site-packages/pyCRGI/data/
   
 
 	- Or run the install script:
@@ -71,7 +71,7 @@ python igrf13_install.py
 
 ```bash
 
-pip install saltpy-0.0.2-py3-none-any.whl
+pip install .\saltpy-*-py3-none-any.whl
 ```
 
 ## Step 4: Launch Jupyter 
