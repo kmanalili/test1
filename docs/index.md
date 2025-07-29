@@ -6,7 +6,7 @@ SaltPy is a Python package for the processing, analysis, and visualization of so
 
 ## Getting Started
 
-- [Installation & Setup](installation.md)  
+- [Installation & Setup](setup/installation.md)  
   Learn how to install SaltPy and set up your environment.
 
 - [Examples](examples/wireframe-EXAMPLE.md)  
